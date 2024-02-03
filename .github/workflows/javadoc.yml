@@ -1,25 +1,21 @@
-name: 'Publish JavaDoc'
+name: Deploy Javadoc
 
+permissions:
+  contents: write
+  
 on:
   push:
-    branches: ['master']
-  
+    branches:
+      - master
+      - main
+
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    
     steps:
-     - name: Publish JavaDoc
-       uses: ren130302/publish-javadoc@test
+      - name: Deploy javadoc to Github Pages
+        uses: dev-vince/actions-publish-javadoc@v1.0.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
