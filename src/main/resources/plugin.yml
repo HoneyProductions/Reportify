@@ -1,0 +1,4 @@
+name: Reportify
+version: '${project.version}'
+main: com.goodbee.reportify.Reportify
+api-version: '1.20'
