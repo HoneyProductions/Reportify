@@ -1,4 +1,9 @@
 name: Reportify
 version: '${project.version}'
-main: com.goodbee.reportify.Reportify
+main: me.goodbee.reportify.Reportify
 api-version: '1.20'
+commands:
+  report:
+    description: Report a player.
+  z-respondreport:
+    description: Internal response command.

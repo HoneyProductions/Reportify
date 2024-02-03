@@ -1,4 +1,4 @@
-package com.goodbee.reportify;
+package me.goodbee.reportify;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -6,8 +6,8 @@ public final class Reportify extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        getCommand("report").setExecutor(new ReportCommand());
+        getCommand("z-respondreport").setExecutor(new RespondCommand());
     }
 
     @Override
