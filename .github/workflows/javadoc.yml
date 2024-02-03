@@ -16,15 +16,15 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: 'adopt'
+          java-version: '11'
 
       - name: Generate Javadocs
         run: |
           mvn javadoc:javadoc
           
       - name: Deploy Javadocs
-        uses: JamesIves/github-pages-deploy-action@4.0.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: javadoc
-          folder: /target/site/apidocs
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/apidocs  # Replace with the actual path to your Javadoc output
