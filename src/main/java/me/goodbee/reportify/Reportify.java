@@ -2,6 +2,9 @@ package me.goodbee.reportify;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Main class.
+ */
 public final class Reportify extends JavaPlugin {
 
     @Override

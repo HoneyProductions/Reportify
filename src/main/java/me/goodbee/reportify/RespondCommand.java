@@ -7,6 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+/**
+ * The class handling the internal response command.
+ */
 public class RespondCommand implements CommandExecutor {
 
     @Override

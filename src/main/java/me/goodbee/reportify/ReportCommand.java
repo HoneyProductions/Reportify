@@ -10,6 +10,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.w3c.dom.Text;
 
+/**
+ * Class handling the /report command
+ */
 public class ReportCommand implements CommandExecutor {
 
     @Override
