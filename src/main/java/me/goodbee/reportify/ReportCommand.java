@@ -17,7 +17,7 @@ public class ReportCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
+asgasg
         if(args.length < 1) {
             sender.sendMessage(ChatColor.RED + "Usage: /report <player>");
             return false;
